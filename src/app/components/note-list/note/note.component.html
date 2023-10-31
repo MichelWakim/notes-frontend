@@ -1,0 +1,17 @@
+  <div class="bg-white p-4 shadow-md rounded-lg grid square relative">
+    <div class="absolute top-2 right-2 flex flex-col justify-center">
+      <a [routerLink]="['edit', note?.id]" class="text-2xl">
+        <i class="fa fa-edit fa-xl text-blue-500"></i>
+      </a>
+      <a (click)="deleteNote(note?.id)" class="text-2xl cursor-pointer">
+        <i class="fa fa-trash  text-red-500"></i>
+      </a>
+    </div>
+    <div class="truncate w-full pr-5">
+      <h2 class="text-lg font-semibold mb-2 truncate">{{ note?.title }}</h2>
+      <p class="truncate">{{ note?.body }}</p>
+      <p class="text-gray-600 text-sm mt-2">#{{ note?.id }}</p>
+    </div>
+
+  </div>
+
