@@ -1,27 +1,67 @@
 # NotesFrontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.8.
+Welcome to the NotesFrontend project! This Angular application was generated using [Angular CLI](https://github.com/angular/angular-cli) version 16.2.8.
 
-## Development server
+## Packages Used
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+This project uses various packages and dependencies. Here's a list of the key packages used:
 
-## Code scaffolding
+- **Angular** and related packages:
+  - `@angular/animations`
+  - `@angular/common`
+  - `@angular/compiler`
+  - `@angular/core`
+  - `@angular/forms`
+  - `@angular/platform-browser`
+  - `@angular/platform-browser-dynamic`
+  - `@angular/router`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Development and build tools**:
+  - `@angular-devkit/build-angular`
+  - `@angular/cli`
+  - `@angular/compiler-cli`
+  - `typescript`
+  - `rxjs`
 
-## Build
+- **Testing and linting**:
+  - `@types/jasmine`
+  - `karma`
+  - `karma-chrome-launcher`
+  - `karma-coverage`
+  - `karma-jasmine`
+  - `karma-jasmine-html-reporter`
+  - `jasmine-core`
+  - `eslint`
+  - `eslint-config-prettier`
+  - `eslint-plugin-prettier`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- **Other libraries**:
+  - `chart.js`
+  - `font-awesome`
+  - `tailwindcss`
 
-## Running unit tests
+## How to Run the Project
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Follow these steps to run the NotesFrontend project:
 
-## Running end-to-end tests
+1. **Navigate to the Project Directory:**
+   ```bash 
+   cd notes-frontend
+   ```
+2. **Install Dependencies:**
+  ```bash
+  npm install
+  ```
+3. **Start the Development Server:**
+  ```bash
+  ng serve
+```
+This will start the development server. You can access your application by opening your web browser and navigating to [http://localhost:4200/](http://localhost:4200/). The application will automatically reload if you make changes to the source files.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+4. **Building for Deployment:**
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+To build your project for deployment, use the following command:
+```bash 
+  ng build
+```
+The build artifacts will be stored in the dist/ directory.
