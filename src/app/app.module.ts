@@ -6,10 +6,12 @@ import { NoteListComponent } from './components/note-list/note-list.component';
 import { NoteComponent } from './components/note-list/note/note.component';
 import { CreateEditNoteComponent } from './components/create-edit-note/create-edit-note.component';
 import { AppRoutingModule } from './app-routing.module';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import {HttpClientModule} from "@angular/common/http";
 import {RouterModule} from "@angular/router";
+import { TrackingComponent } from './components/tracking/tracking.component';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
@@ -18,8 +20,17 @@ import {RouterModule} from "@angular/router";
     NoteComponent,
     CreateEditNoteComponent,
     NavBarComponent,
+    TrackingComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, RouterModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    RouterModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

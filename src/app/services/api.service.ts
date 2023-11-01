@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {Observable} from "rxjs";
-import {Note} from "../interfaces";
+import {Note, TrackingCreatedNote, TrackingUpdatedNote} from "../interfaces";
 import {environment} from "../../environments/environment";
 
 @Injectable({
@@ -30,5 +30,14 @@ export class ApiService {
 
   deleteNote(id: number): Observable<void> {
     return this._http.delete<void>(`${this.apiUrl}/note/${id}`);
+  }
+
+  trackingCreatedDate(fromDate: string, toDate: string): Observable<TrackingCreatedNote[]> {
+    return this._http.get<TrackingCreatedNote[]>(`${this.apiUrl}/note/grouped-by-created-date?fromDate=${fromDate}&toDate=${toDate}`);
+  }
+
+
+  trackingUpdatedDate(fromDate: string, toDate: string): Observable<TrackingUpdatedNote[]> {
+    return this._http.get<TrackingUpdatedNote[]>(`${this.apiUrl}/note/grouped-by-updated-date?fromDate=${fromDate}&toDate=${toDate}`);
   }
 }
